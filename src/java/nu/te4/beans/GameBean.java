@@ -23,7 +23,7 @@ public class GameBean
     {
         try
         {
-            FileReader levelFile = new FileReader("C:/Users/sebastianmeyer/Webbutveckling/Level Creator/src/java/nu/te4/beans/levels.json");
+            FileReader levelFile = new FileReader("C:/Users/sebastianmeyer/Webbutveckling/Level_Creator/src/java/nu/te4/beans/levels.json");
             JsonReader jsonReader = Json.createReader(levelFile);
             JsonObject levels = jsonReader.readObject();
             return levels;
@@ -64,7 +64,7 @@ public class GameBean
             String levelsJsonString = jsonObjectBuilder.build().toString();
             
             //sparar det nya objektet till levels.json
-            FileWriter levelFile = new FileWriter("C:/Users/sebastianmeyer/Webbutveckling/Level Creator/src/java/nu/te4/beans/levels.json");
+            FileWriter levelFile = new FileWriter("C:/Users/sebastianmeyer/Webbutveckling/Level_Creator/src/java/nu/te4/beans/levels.json");
             levelFile.write(levelsJsonString, 0, levelsJsonString.length());
             levelFile.close();
         }
